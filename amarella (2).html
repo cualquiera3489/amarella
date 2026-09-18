@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amarella — Manillas</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--amarillo:#FBD25E;--crema:#FDF6DF;--tinta:#2E2C2B;--bg:var(--crema);--fg:var(--tinta)}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1c1a17;--fg:#FDF6DF}}
+:root[data-theme="dark"]{--bg:#1c1a17;--fg:#FDF6DF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Quicksand,"Trebuchet MS",sans-serif}
+.deck{max-width:960px;margin:0 auto;padding:16px}
+.slide{display:none;border-radius:22px;padding:38px 30px;min-height:70vh;background:var(--crema);color:var(--tinta);
+  box-shadow:0 6px 24px rgba(0,0,0,.12);animation:fade .25s ease}
+.slide.on{display:flex;flex-direction:column;justify-content:center}
+.slide.amar{background:var(--amarillo)}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+h1,h2{font-family:Fredoka,Fredoka One,sans-serif;letter-spacing:.5px;margin:0 0 18px}
+h1{font-size:clamp(34px,7vw,64px);text-transform:uppercase}
+h2{font-size:clamp(24px,4.5vw,40px);text-transform:uppercase}
+p,li{font-size:clamp(16px,2.2vw,21px);line-height:1.55}
+ul{padding-left:22px}
+.toc{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.toc li{display:flex;align-items:center;gap:10px}
+.n{flex:0 0 36px;height:36px;border-radius:50%;background:var(--amarillo);display:grid;place-items:center;
+  font-family:Fredoka,sans-serif;font-weight:700}
+.slide.amar .n{background:var(--crema)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.caja{background:var(--amarillo);border-radius:16px;padding:20px}
+.slide.amar .caja{background:var(--crema)}
+.precio{font-family:Fredoka,sans-serif;font-size:clamp(20px,3vw,28px)}
+.centro{text-align:center}
+.contacto{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;margin-top:26px;font-weight:600}
+nav{display:flex;align-items:center;justify-content:center;gap:16px;padding:14px}
+button{font:inherit;font-weight:600;border:0;border-radius:999px;padding:10px 20px;background:var(--amarillo);
+  color:var(--tinta);cursor:pointer}
+button:disabled{opacity:.4;cursor:default}
+#cont{font-weight:600}
+@media(max-width:640px){.dos{grid-template-columns:1fr}.slide{padding:26px 18px}}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<section class="slide amar on centro">
+  <h1>Amarella</h1>
+  <p class="precio">Manillas que expresan tu estilo</p>
+</section>
+
+<section class="slide">
+  <h2>Tabla de contenido</h2>
+  <ul class="toc">
+    <li><span class="n">1</span>Presentación de la empresa</li>
+    <li><span class="n">2</span>Introducción</li>
+    <li><span class="n">3</span>¿Qué productos ofrecemos?</li>
+    <li><span class="n">4</span>¿Para qué se van a vender?</li>
+    <li><span class="n">5</span>¿Por qué se pueden vender?</li>
+    <li><span class="n">6</span>¿Quiénes son nuestros clientes?</li>
+    <li><span class="n">7</span>Innovación</li>
+    <li><span class="n">8</span>Misión y visión</li>
+    <li><span class="n">9</span>¿Qué nos diferencia?</li>
+    <li><span class="n">10</span>Estrategias de venta y promoción</li>
+    <li><span class="n">11</span>Conclusión</li>
+  </ul>
+</section>
+
+<section class="slide amar">
+  <h2>Presentación de la empresa</h2>
+  <p>Amarella es un emprendimiento dedicado a la elaboración y venta de manillas, creadas como accesorios para complementar diferentes estilos y expresar la personalidad de cada persona.</p>
+  <p>Nuestro objetivo es ofrecer manillas bonitas, originales y accesibles, para que nuestros clientes puedan utilizarlas como parte de su estilo diario o regalarlas a personas especiales.</p>
+</section>
+
+<section class="slide amar">
+  <h2>Introducción</h2>
+  <p>Las manillas son accesorios que pueden utilizarse en diferentes ocasiones y combinarse con distintos estilos de ropa. En Amarella queremos crear manillas atractivas y accesibles para que nuestros clientes puedan elegir diseños que se adapten a sus gustos.</p>
+</section>
+
+<section class="slide amar centro">
+  <h2>¿Qué productos ofrecemos?</h2>
+  <p>Ofrecemos manillas de diferentes colores, diseños y estilos.</p>
+  <p class="precio">Manillas sencillas: $6.000</p>
+  <p class="precio">Manillas con diseños o detalles especiales: $8.000</p>
+  <p>Buscamos tener variedad para que cada cliente pueda encontrar una manilla que le guste.</p>
+</section>
+
+<section class="slide">
+  <h2>¿Para qué se van a vender?</h2>
+  <div class="caja">
+    <p>Las manillas se van a vender como accesorios para uso personal y también como regalos para amigos, familiares o personas especiales. Son productos que pueden utilizarse diariamente o en ocasiones especiales.</p>
+  </div>
+</section>
+
+<section class="slide amar">
+  <h2>¿Por qué se pueden vender?</h2>
+  <p>Se pueden vender porque son productos económicos, llamativos y fáciles de usar. Además, las personas buscan accesorios que les permitan mostrar sus gustos y personalidad sin gastar demasiado dinero.</p>
+</section>
+
+<section class="slide amar">
+  <h2>¿Quiénes son nuestros clientes?</h2>
+  <p>Nuestros principales clientes son jóvenes, estudiantes y personas que disfrutan utilizar accesorios. También pueden ser personas que buscan un regalo económico, bonito y diferente.</p>
+</section>
+
+<section class="slide amar">
+  <h2>Innovación</h2>
+  <p>Diseños personalizados con nombres, colores e iniciales, combinaciones nuevas cada temporada y empaques hechos a mano que hacen que cada manilla se sienta única.</p>
+</section>
+
+<section class="slide">
+  <h2>Misión y visión</h2>
+  <div class="dos">
+    <div class="caja"><h2>Misión</h2><p>Crear y vender manillas bonitas, creativas y económicas, ofreciendo productos de buena calidad y una atención agradable a nuestros clientes.</p></div>
+    <div class="caja"><h2>Visión</h2><p>Lograr que Amarella sea reconocida como un emprendimiento de accesorios creativo y confiable, aumentando nuestra variedad de diseños y llegando a más clientes.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>¿Qué nos diferencia?</h2>
+  <p>Nos diferencia la variedad de diseños, los precios accesibles y la posibilidad de ofrecer productos personalizados. Queremos que nuestros clientes no solo compren una manilla, sino que encuentren un accesorio que represente su estilo.</p>
+</section>
+
+<section class="slide">
+  <h2>Estrategias de venta y promoción</h2>
+  <ul>
+    <li>Redes sociales como Instagram, TikTok y WhatsApp.</li>
+    <li>Fotografías y videos de nuestros productos.</li>
+    <li>Promociones y descuentos por la compra de varias manillas.</li>
+    <li>Recomendaciones de nuestros clientes.</li>
+    <li>Diseños personalizados para llamar la atención de nuevos compradores.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Conclusión</h2>
+  <div class="caja">
+    <p>Amarella es un emprendimiento que busca ofrecer manillas bonitas, creativas y económicas. Con precios de $6.000 y $8.000, variedad de diseños y buenas estrategias de promoción, queremos satisfacer a nuestros clientes y hacer crecer nuestro negocio.</p>
+  </div>
+</section>
+
+<section class="slide amar centro">
+  <h1>Gracias por su atención</h1>
+  <div class="contacto">
+    <span>✉ madejean2004@gmail.com</span>
+    <span>☎ 315 840 5543</span>
+  </div>
+</section>
+
+</div>
+<nav>
+  <button id="ant">← Anterior</button>
+  <span id="cont"></span>
+  <button id="sig">Siguiente →</button>
+</nav>
+<script>
+var s=document.querySelectorAll('.slide'),i=0;
+function ver(n){s[i].classList.remove('on');i=Math.max(0,Math.min(s.length-1,n));s[i].classList.add('on');
+document.getElementById('cont').textContent=(i+1)+' / '+s.length;
+document.getElementById('ant').disabled=i===0;document.getElementById('sig').disabled=i===s.length-1;
+window.scrollTo(0,0);}
+document.getElementById('ant').onclick=function(){ver(i-1)};
+document.getElementById('sig').onclick=function(){ver(i+1)};
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')ver(i+1);if(e.key==='ArrowLeft')ver(i-1)});
+ver(0);
+</script>
+</body>
+</html>
